@@ -1,0 +1,10 @@
+overrideExisting: true
+schema: 'https://api.thegraph.com/subgraphs/name/uniswap/uniswap-v3'
+documents:
+  - 'src/**/!(*.d).{ts,tsx}'
+  - '!src/mevswap/**'
+  - '!src/uniswap/**'
+generates:
+  ./src/graphql/schema/schema.graphql:
+    plugins:
+      - schema-ast
